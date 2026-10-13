@@ -1,0 +1,11 @@
+{
+  "name": "fed-usa-news",
+  "compatibility_date": "2026-10-13",
+  // Serve the repository root directly; there is no build step.
+  "assets": {
+    "directory": ".",
+    // Use the custom 404 page for missing paths.
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
