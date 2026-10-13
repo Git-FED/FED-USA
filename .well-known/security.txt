@@ -1,0 +1,7 @@
+# Security contact for FED-USA News
+Contact: mailto:security@fed-usa.news
+Expires: 2027-10-13T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://fed-usa.news/.well-known/security.txt
+Policy: https://fed-usa.news/security.html
+Acknowledgments: https://fed-usa.news/security.html#thanks
