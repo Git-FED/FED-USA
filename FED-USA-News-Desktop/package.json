@@ -17,7 +17,7 @@
     "sync-site": "node scripts/sync-site.js"
   },
   "devDependencies": {
-    "electron": "30.5.1",
+    "electron": "41.10.6",
     "electron-builder": "24.13.3",
     "eslint": "9.13.0"
   },
