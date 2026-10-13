@@ -1,0 +1,76 @@
+{
+  "name": "fed-usa-news",
+  "productName": "FED-USA News",
+  "version": "1.0.0",
+  "description": "Unofficial offline desktop reader for FED-USA News",
+  "main": "main.js",
+  "author": "FED-USA News",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --enable-logging",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux",
+    "sync-site": "node scripts/sync-site.js"
+  },
+  "devDependencies": {
+    "electron": "30.5.1",
+    "electron-builder": "24.13.3",
+    "eslint": "9.13.0"
+  },
+  "build": {
+    "appId": "com.fedusa.news",
+    "productName": "FED-USA News",
+    "files": [
+      "main.js",
+      "preload.js",
+      "menu.js",
+      "app/site/**/*",
+      "build/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "compression": "maximum",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "build/icon.icns",
+      "category": "public.app-category.news",
+      "hardenedRuntime": true,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "notarize": false
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "icon": "build/icons/",
+      "category": "News"
+    }
+  }
+}
