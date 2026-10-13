@@ -1,0 +1,6 @@
+# CODEOWNERS — reviews auto-requested for the paths below. Single-editor repo for now; expand as contributors join.
+* @your-username
+/content/ @your-username
+/.github/ @your-username
+/brand/ @your-username
+/assets/ @your-username
