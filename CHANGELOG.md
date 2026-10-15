@@ -4,8 +4,12 @@ Following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and [Semantic
 
 ## [Unreleased]
 ### Added
+- Add source-linked U.S. politics and world briefing pages, plus a searchable story directory
 ### Changed
+- Refresh the visual system, shared navigation, footer, newsroom copy, and mobile/reduced-motion behavior
+- Update the feed, manifest, sitemap, redirects, and embedded wrapper site copies
 ### Fixed
+- Remove the unconfigured newsletter form, stale routes, and unverified named-story placeholder
 
 ## [0.1.0] - 2026-10-13
 ### Added

@@ -1,1 +1,75 @@
-(() => { const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches; document.querySelectorAll('[data-reveal]').forEach(el => { if (!reduced) { el.style.opacity='0'; el.style.transform='translateY(18px)'; const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition='opacity .6s ease,transform .6s ease';e.target.style.opacity='1';e.target.style.transform='none';io.unobserve(e.target)}}); io.observe(el); } }); const toggle=document.querySelector('#theme-toggle'); toggle?.addEventListener('click',()=>{document.documentElement.classList.toggle('light');document.documentElement.style.setProperty('--bg',document.documentElement.classList.contains('light')?'#f5f6f8':'#07070a');document.documentElement.style.setProperty('--text',document.documentElement.classList.contains('light')?'#111827':'#f4efe6');localStorage.setItem('theme',document.documentElement.classList.contains('light')?'light':'dark')}); if(localStorage.getItem('theme')==='light') toggle?.click(); const c=document.querySelector('#particles'); if(c&&!reduced){const x=c.getContext('2d');let pts=[];function size(){c.width=c.clientWidth*devicePixelRatio;c.height=c.clientHeight*devicePixelRatio;pts=Array.from({length:36},()=>({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))}function loop(){x.clearRect(0,0,c.width,c.height);x.fillStyle='#00f0ff';for(const p of pts){p.x=(p.x+p.vx+c.width)%c.width;p.y=(p.y+p.vy+c.height)%c.height;x.globalAlpha=.35;x.fillRect(p.x,p.y,2,2)}requestAnimationFrame(loop)}addEventListener('resize',size);size();loop()} })();
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const menuButton = document.querySelector('#menu-toggle');
+  const siteNav = document.querySelector('#site-nav');
+
+  if (menuButton && siteNav) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Open navigation' : 'Close navigation');
+      siteNav.classList.toggle('is-open', !isOpen);
+    });
+    siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Open navigation');
+      siteNav.classList.remove('is-open');
+    }));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation');
+        siteNav.classList.remove('is-open');
+      }
+    });
+  }
+
+  const progress = document.querySelector('.reading-progress');
+  const updateProgress = () => {
+    if (!progress) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${scrollable > 0 ? window.scrollY / scrollable : 0})`;
+  };
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress, { passive: true });
+
+  const revealItems = document.querySelectorAll('[data-reveal]');
+  if (revealItems.length && !reduceMotion && 'IntersectionObserver' in window) {
+    document.documentElement.classList.add('reveal-ready');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach(item => observer.observe(item));
+  }
+
+  const search = document.querySelector('[data-search-input]');
+  const cards = [...document.querySelectorAll('[data-searchable]')];
+  const emptyState = document.querySelector('.empty-state');
+  const filterButtons = [...document.querySelectorAll('[data-filter]')];
+  let activeFilter = 'all';
+  const filterStories = () => {
+    const query = (search?.value || '').trim().toLowerCase();
+    let visibleCount = 0;
+    cards.forEach(card => {
+      const category = card.dataset.category || '';
+      const matchesFilter = activeFilter === 'all' || category === activeFilter;
+      const matchesQuery = !query || card.textContent.toLowerCase().includes(query);
+      const visible = matchesFilter && matchesQuery;
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+    if (emptyState) emptyState.style.display = visibleCount ? 'none' : 'block';
+  };
+  search?.addEventListener('input', filterStories);
+  filterButtons.forEach(button => button.addEventListener('click', () => {
+    activeFilter = button.dataset.filter || 'all';
+    filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    filterStories();
+  }));
+})();

@@ -1,1 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>FED-USA News</title><link>https://fed-usa.news/</link><description>Local news by FED-USA</description><item><title>Kevin Morris: reporting file</title><link>https://fed-usa.news/stories/kevin-morris.html</link><guid>https://fed-usa.news/stories/kevin-morris.html</guid><pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>FED-USA News</title>
+    <link>https://fed-usa.news/</link>
+    <description>Source-linked daily briefs, local-first reporting, and clear context from FED-USA News.</description>
+    <language>en-us</language>
+    <item>
+      <title>Daily brief — October 15, 2026</title>
+      <link>https://fed-usa.news/index.html#daily-brief</link>
+      <guid>https://fed-usa.news/index.html#daily-brief-2026-10-15</guid>
+      <pubDate>Thu, 15 Oct 2026 17:12:00 GMT</pubDate>
+      <description>U.S. politics, a Saudi Aramco strike, Ukraine-Russia energy infrastructure, and the IMF’s Asia-Pacific outlook, with AP and Reuters source links.</description>
+    </item>
+    <item>
+      <title>U.S. politics — AP-NORC poll and election-safety reporting</title>
+      <link>https://fed-usa.news/politics.html</link>
+      <guid>https://fed-usa.news/politics.html</guid>
+      <pubDate>Thu, 15 Oct 2026 17:12:00 GMT</pubDate>
+      <description>A dated summary of an AP-NORC poll and an election-office mail investigation, with source attribution.</description>
+    </item>
+    <item>
+      <title>World news — October 15, 2026</title>
+      <link>https://fed-usa.news/world.html</link>
+      <guid>https://fed-usa.news/world.html</guid>
+      <pubDate>Thu, 15 Oct 2026 17:12:00 GMT</pubDate>
+      <description>AP and Reuters briefs on the reported Aramco strike, the Ryazan refinery, and the IMF’s regional outlook.</description>
+    </item>
+  </channel>
+</rss>

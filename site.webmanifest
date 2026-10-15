@@ -1,11 +1,11 @@
 {
   "name": "FED-USA News",
   "short_name": "FED-USA",
-  "description": "Local news by FED-USA. Scam alerts, city hall watch, and follow-ups.",
+  "description": "Source-linked news, local-first reporting, and clear context from FED-USA News.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#07070a",
-  "theme_color": "#00f0ff",
+  "background_color": "#fbfaf7",
+  "theme_color": "#15345a",
   "icons": [
     {
       "src": "/assets/images/favicon.ico",
@@ -23,7 +23,5 @@
       "type": "image/png"
     }
   ],
-  "categories": [
-    "news"
-  ]
+  "categories": ["news"]
 }

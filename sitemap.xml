@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://fed-usa.news/</loc><lastmod>2026-10-13</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url><url><loc>https://fed-usa.news/stories/kevin-morris.html</loc><lastmod>2026-10-13</lastmod><priority>0.7</priority></url><url><loc>https://fed-usa.news/stories/scam-of-the-week.html</loc><lastmod>2026-10-13</lastmod><priority>0.7</priority></url><url><loc>https://fed-usa.news/stories/scanner-watch.html</loc><lastmod>2026-10-13</lastmod><priority>0.7</priority></url><url><loc>https://fed-usa.news/chapters/</loc><lastmod>2026-10-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://fed-usa.news/</loc><lastmod>2026-10-15</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://fed-usa.news/politics.html</loc><lastmod>2026-10-15</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fed-usa.news/world.html</loc><lastmod>2026-10-15</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fed-usa.news/stories/index.html</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fed-usa.news/stories/scam-of-the-week.html</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://fed-usa.news/stories/scanner-watch.html</loc><lastmod>2026-10-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://fed-usa.news/chapters/index.html</loc><lastmod>2026-10-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fed-usa.news/about.html</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fed-usa.news/editorial-standards.html</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fed-usa.news/corrections.html</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fed-usa.news/tips.html</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fed-usa.news/contact.html</loc><lastmod>2026-10-15</lastmod><priority>0.6</priority></url>
+  <url><loc>https://fed-usa.news/support.html</loc><lastmod>2026-10-15</lastmod><priority>0.5</priority></url>
+  <url><loc>https://fed-usa.news/accessibility.html</loc><lastmod>2026-10-15</lastmod><priority>0.4</priority></url>
+  <url><loc>https://fed-usa.news/privacy.html</loc><lastmod>2026-10-15</lastmod><priority>0.4</priority></url>
+  <url><loc>https://fed-usa.news/terms.html</loc><lastmod>2026-10-15</lastmod><priority>0.4</priority></url>
+</urlset>
