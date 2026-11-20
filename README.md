@@ -1,7 +1,7 @@
-<div align="center"><img src="assets/images/logo.webp" width="96" alt="FED-USA News eagle shield"><h1>FED-USA News</h1><p><strong>— News by FED-USA.</strong></p><p>Local news by FED-USA. Scam alerts, city hall watch, and follow-ups — sourced from the neighborhood, verified before publish.</p></div>
+<div align="center"><img src="assets/images/logo.webp" width="96" alt="FED-USA News eagle shield"><h1>FED-USA News</h1><p><strong>— News by FED-USA.</strong></p><p>Local news by FED-USA, tracked by Muse AI. Scam alerts, city hall watch, and follow-ups — sourced from the neighborhood, verified before publish, and tracked until there is an outcome.</p></div>
 
 ## What this is
-FED-USA News is an independent local reporting project for neighbors who need clear, useful information. It covers scam alerts, public safety, city hall, cyber incidents, and follow-ups. It is community-funded and keeps breaking scam alerts free to read.
+FED-USA News is an independent local reporting project for neighbors who need clear, useful information. It covers scam alerts, public safety, city hall, cyber incidents, and follow-ups. Muse AI keeps track of each story — its source, its status, its last check, and its next follow-up — so a story does not disappear after the first headline. It is community-funded and keeps breaking scam alerts free to read.
 
 ## Quick start
 1. Clone the repository.
@@ -22,7 +22,7 @@ FED-USA News is an independent local reporting project for neighbors who need cl
 The newsletter provider is not connected in this starter bundle. Replace the homepage form action after choosing a provider. Support the reporting at [Patreon](https://www.patreon.com/c/FEDpromptly). The long checkout URL supplied during planning is intentionally not embedded because OAuth state links expire.
 
 ## Editorial workflow
-Tip → draft → verify → editor review → publish → cross-post to Nextdoor → corrections log.
+Tip → Muse AI tracks it → draft → verify → editor review → publish → cross-post to Nextdoor → Muse AI follows up → corrections log.
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md). Sensitive tips belong in email, not public GitHub issues.
@@ -30,5 +30,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Sensitive tips belong in email, not publ
 ## License
 MIT.
 
-— News by FED-USA  
+— News by FED-USA · Tracked by Muse AI  
 Free to read · Community funded · No paywall on scam alerts.
