@@ -1,5 +1,7 @@
 <div align="center"><img src="assets/images/logo.webp" width="96" alt="FED-USA News eagle shield"><h1>FED-USA News</h1><p><strong>— News by FED-USA.</strong></p><p>Local news by FED-USA, tracked by Muse AI. Scam alerts, city hall watch, and follow-ups — sourced from the neighborhood, verified before publish, and tracked until there is an outcome.</p></div>
 
+https://github.com/user-attachments/assets/c0b85e7d-ebfb-4f32-b03f-5b7de56425a6
+
 ## What this is
 FED-USA News is an independent local reporting project for neighbors who need clear, useful information. It covers scam alerts, public safety, city hall, cyber incidents, and follow-ups. Muse AI keeps track of each story — its source, its status, its last check, and its next follow-up — so a story does not disappear after the first headline. It is community-funded and keeps breaking scam alerts free to read.
 
