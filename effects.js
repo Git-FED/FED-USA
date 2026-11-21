@@ -72,4 +72,25 @@
     filterButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
     filterStories();
   }));
+
+  // Dark mode: the toggle button in the nav flips data-theme on <html>.
+  // The saved choice in localStorage wins; otherwise the theme already set
+  // by the small script in <head> (system setting) stands.
+  const themeToggle = document.querySelector('#theme-toggle');
+  const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    if (themeToggle) {
+      const dark = theme === 'dark';
+      themeToggle.textContent = dark ? '☀️ Light' : '🌙 Dark';
+      themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    if (themeColorMeta) themeColorMeta.setAttribute('content', theme === 'dark' ? '#101826' : '#15345a');
+  };
+  applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+  themeToggle?.addEventListener('click', () => {
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('fedusa-theme', next); } catch (e) {}
+    applyTheme(next);
+  });
 })();
