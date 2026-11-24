@@ -12,7 +12,7 @@ jobs:
     if: github.event_name == 'pull_request' || contains(github.event.comment.body, '@imgbot')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # ImgBot opens a follow-up PR to compress new images without touching quality.
       - uses: imgbot/Imgbot@main
         env:
